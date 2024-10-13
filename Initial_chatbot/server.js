@@ -5,7 +5,7 @@ const openai = require('openai');
 
 app.use(express.static(__dirname));
 
-// openai.apiKey = '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'; // Replace with your actual API key
+// openai.apiKey = ''; // Replace with your actual API key
 
 app.post('/get-response', async (req, res) => {
   const message = req.body.message;
