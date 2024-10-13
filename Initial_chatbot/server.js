@@ -1,9 +1,11 @@
 // This is a simplified example using Express.js
 const express = require('express');
 const app = express();
-
 const openai = require('openai');
-openai.apiKey = 'Ysk-admin-NhOJreNOcfUmczmDJeCmX36IcZJAsqm06esNJ29D890A0Nr5ldvcjY_uCKT3BlbkFJq77TR1hadVmF42LkU2_ru8yLgRJWSjl6ylQi6Zo49TFYpQ1z2KJiddyjQA'; // Replace with your actual API key
+
+app.use(express.static(__dirname));
+
+openai.apiKey = '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'; // Replace with your actual API key
 
 app.post('/get-response', async (req, res) => {
   const message = req.body.message;
